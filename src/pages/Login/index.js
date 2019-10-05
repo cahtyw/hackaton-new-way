@@ -10,6 +10,7 @@ import {
   Label,
   CardHeader,
   Input,
+  Form,
   Alert
 } from "reactstrap";
 
@@ -42,7 +43,9 @@ export default function Login({ history }) {
     }
   }, []);
 
-  const login = async () => {
+  const login = async e => {
+    e.preventDefault();
+
     const some = users.some(
       user => user.username === username && user.password === password
     );
@@ -65,32 +68,34 @@ export default function Login({ history }) {
           </LogoArea>
         </CardHeader>
         <CardBody>
-          {wrong && <Alert color="danger">Usuário ou senha inválidos.</Alert>}
-          <FormGroup>
-            <Label for="exampleEmail">E-mail</Label>
-            <Input
-              type="email"
-              name="email"
-              value={username}
-              onChange={e => changeUsername(e.target.value)}
-              placeholder="exemplo@exemplo.com.br"
-            />
-          </FormGroup>
-          <FormGroup>
-            <Label for="examplePassword">Senha</Label>
-            <Input
-              type="password"
-              name="password"
-              value={password}
-              onChange={e => changePassword(e.target.value)}
-              placeholder="******************"
-            />
-          </FormGroup>
-          <SubmitArea>
-            <Submit onClick={login} color="warning">
-              Entrar
-            </Submit>
-          </SubmitArea>
+          <Form>
+            {wrong && <Alert color="danger">Usuário ou senha inválidos.</Alert>}
+            <FormGroup>
+              <Label for="exampleEmail">E-mail</Label>
+              <Input
+                type="email"
+                name="email"
+                value={username}
+                onChange={e => changeUsername(e.target.value)}
+                placeholder="exemplo@exemplo.com.br"
+              />
+            </FormGroup>
+            <FormGroup>
+              <Label for="examplePassword">Senha</Label>
+              <Input
+                type="password"
+                name="password"
+                value={password}
+                onChange={e => changePassword(e.target.value)}
+                placeholder="******************"
+              />
+            </FormGroup>
+            <SubmitArea>
+              <Submit type="submit" onClick={login} color="warning">
+                Entrar
+              </Submit>
+            </SubmitArea>
+          </Form>
         </CardBody>
       </Card>
     </Container>
