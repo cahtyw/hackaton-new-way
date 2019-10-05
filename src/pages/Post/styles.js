@@ -41,3 +41,31 @@ export const CardFooterEdited = styled.div`
 export const CreatedAt = styled.span`
   font-size: 10px;
 `;
+
+export const TitleArea = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+`;
+
+export const DefaultHeader = styled.div`
+  display: flex;
+  flex: 1;
+  justify-content: ${({ flex }) => flex};
+  align-items: center;
+`;
+
+export const Image = styled.img`
+  max-height: 30px;
+  max-width: 30px;
+  min-height: 30px;
+  min-width: 30px;
+  border-radius: 50%;
+`;
+
+export const Author = styled.span`
+  font-size: 10px;
+  color: #404041;
+  margin-right: 10px;
+`;

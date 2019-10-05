@@ -19,6 +19,7 @@ export const Options = styled.div`
 export const Container = styled.div`
   display: flex;
   flex: 1;
+  height: 100%;
   background: #404041;
   flex-direction: row;
   justify-content: center;
