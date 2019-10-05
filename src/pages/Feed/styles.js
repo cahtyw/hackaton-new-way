@@ -19,11 +19,10 @@ export const Options = styled.div`
 export const Container = styled.div`
   display: flex;
   flex: 1;
-  height: 100%;
   background: #404041;
   flex-direction: row;
   justify-content: center;
-  padding: 20px 50px;
+  padding: 20px 200px;
 `;
 
 export const News = styled.div`
@@ -42,7 +41,7 @@ export const UserArea = styled.div`
   flex: 1;
   justify-content: center;
   flex-direction: column;
-
+  max-width: 300px;
   max-height: 900px;
 `;
 export const Logo = styled.div``;
