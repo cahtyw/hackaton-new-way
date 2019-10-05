@@ -2,14 +2,9 @@ import React from "react";
 
 import { Options, TextBold, Item, LinkTo } from "./styles";
 
-export default function MenuOnline({ history }) {
+export default function MenuOnline({ history, toggleNewPost }) {
   return (
     <Options>
-      <Item>
-        <LinkTo onClick={() => {}} color="warning">
-          <TextBold>Nova postagem</TextBold>
-        </LinkTo>
-      </Item>
       <Item>
         <LinkTo onClick={() => {}} color="warning">
           <TextBold>Comunicação</TextBold>
